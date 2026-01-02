@@ -25,7 +25,7 @@ A sleek, high-performance Todo application built with **Vanilla TypeScript** and
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+   git clone https://github.com/lamafuri/Todo-List-with-TS.git
    ```
    ```bash
    cd Todo-List-with-TS
