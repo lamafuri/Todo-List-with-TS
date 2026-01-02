@@ -43,6 +43,49 @@ function render() {
     todoList.innerHTML += UI
   })
 }
+function deleteTodo(taskId: string) {
+  todos = todos.filter(todo => String(todo.id) != taskId)
+  console.log(todos);
+  render()
+}
+function editTodo(taskId: string) {
+  let [taskTodo] = todos.filter((todo) => String(todo.id) == taskId)
+  editTodoInput.value = taskTodo.title;
+  editTodoInput.focus()
+  editTodoInput.setSelectionRange(0 , taskTodo.title.length )
+  editForm.addEventListener('submit', function (e: SubmitEvent) {
+    e.preventDefault()
+    todos.forEach(todo =>{
+      if(taskId == String(todo.id)){
+        todo.title = editTodoInput.value;
+      }
+    })
+    render()
+    editTodoInput.value = ""
+    todoInput.focus()
+  })
+}
+
+todoList.addEventListener('click', function (e: Event) {
+  console.log(this);
+  console.log(e.target);
+  if (e.target != null) {
+    let button: HTMLElement = e.target as HTMLElement;
+    console.log(button.textContent);
+    let id = button.parentElement?.className[0]
+    if (id != null) {
+      console.log(id);
+      if (button.textContent == 'Edit') {
+        editTodo(id);
+      }
+      else if (button.textContent == 'Delete') {
+        deleteTodo(id);
+      }
+    }
+  }
+})
+
+
 
 // Listeners
 form.addEventListener('submit', function (e: SubmitEvent) {
