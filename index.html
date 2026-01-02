@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test-ts-crud</title>
+  </head>
+  <body>
+    <div id="main">
+      <form action="" id="todo-form">
+          <input type="text" id="todo-input" placeholder="Enter your todo">
+          <button type="submit" id="submit-button">Add</button>
+        </form>
+        <ul id="todo-list">
+          <li class="todo-item-id">
+          <input type="checkbox" id="todo-item-id">
+          <label for="todo-item-id">
+            First Item
+          </label>
+          <button>Edit</button>
+          <button>Delete</button>
+        </li>
+        <li>
+          <!-- <input type="checkbox" id="todo-list-item">
+          <label for="todo-list-item">
+            First Item
+          </label> -->
+        </li>
+      </ul>
+      <form action="" id="edit-todo-form">
+        <input type="text" id="edit-todo-input">
+        <button type="submit" id="edit-button">Edit</button>
+      </form>
+
+    </div>
+  <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
