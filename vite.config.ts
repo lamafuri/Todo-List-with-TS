@@ -4,5 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
     plugins:[
         tailwindcss()
-    ]
+    ],
+    server:{
+        allowedHosts:["react.lamafuri.com.np"]
+    }
 })
