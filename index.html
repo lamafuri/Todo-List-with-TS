@@ -8,13 +8,13 @@
 	</head>
 
 	<body class="bg-primary-bg text-primary-color relative">
-		<div id="container" class="container bg-red-400 w-full px-6 md:w-187.5 lg:w-187.5 relative">
-			<header>
+		<div id="container" class="container w-full px-6 md:w-187.5 lg:w-187.5 relative">
+			<header class="px-2">
 				<h1 class="text-title font-medium text-center mt-4 mb-4">Todo List</h1>
 				<div id="search-box" class="search grid grid-cols-12">
 					<input type="text" class="col-span-11 rounded-md" placeholder="Search todo..." />
 					<button
-						class="moon h-full bg-theme-purple rounded-md w-8 mx-1 md:px-1 md:mx-2 cursor-pointer"
+						class="moon flex justify-center items-center h-full bg-theme-purple rounded-md min-w-8 w-9 ml-2 cursor-pointer"
 						id="toggle-theme-to-dark">
 						<i class="fa-solid fa-moon text-2xl text-white"></i>
 					</button>
@@ -41,7 +41,7 @@
 		</div>
 
 		<!-- Popup Add new todo -->
-		<form  action="" class="hidden bg-primary-bg text-primary-color w-125 h-72.25 absolute top-29.5 rounded-2xl" id="todo-form">
+		<form  action="" class="hidden bg-primary-bg text-primary-color w-[95%] max-w-125 h-72.25 absolute top-29.5 rounded-2xl" id="todo-form">
 			<h1 class="text-title text-center m-4 font-medium">NEW NOTE</h1>
 			<input class="border border-button-back m-4 px-1 py-2 w-[93%] rounded-md" id="todo-input" placeholder="Enter your note..."></input>
 			<div class="font-medium px-4 flex justify-between mt-15">
@@ -51,7 +51,7 @@
 		</form>
 
 		<!-- Popup for Update TODO -->
-		<form class="hidden bg-primary-bg text-primary-color w-125 h-72.25 absolute top-29.5 rounded-2xl" id="edit-todo-form">
+		<form class="hidden bg-primary-bg text-primary-color w-[95%] max-w-125 h-72.25 absolute top-29.5 rounded-2xl" id="edit-todo-form">
 			<h1 class="text-title text-center m-4 font-medium">EDIT NOTE</h1>
 			<input class="border border-button-back m-4 px-1 py-2 w-[93%] rounded-md" name="notes" id="edit-todo-input"></input>
 			<div class="buttons font-medium px-4 flex justify-between mt-15">
