@@ -44,14 +44,14 @@ function render() {
   todoList.innerHTML = ""
   todos.forEach((todo) => {
     let UI = `<li class = "${todo.id} relative grid grid-cols-12 items-start">
-    <input type="checkbox" id="${todo.id}" class="todo-checkbox col-start-1 col-end-2 cursor-pointer mt-1">
+    <input type="checkbox" id="${todo.id}" class="todo-checkbox col-start-1 col-end-2 cursor-pointer  sm:mt-1">
                   <label for="${todo.id}" class="col-start-2 col-span-9 mx-3 cursor-pointer">
                     ${todo.title}
                   </label>
-                  <button class="edit cursor-pointer col-span-1 mr-2 sm:mr-0">
+                  <button class="edit cursor-pointer col-span-1 sm:mr-2 ">
                   <i class="fa-solid fa-pen-to-square"></i>
                   </button>
-                  <button class="delete cursor-pointer col-span-1 ml-2 sm:ml-0">
+                  <button class="delete cursor-pointer col-span-1 ml:1 sm:ml-0">
                   <i class="fa-solid fa-trash"></i>
                   </button>
                   </li>`

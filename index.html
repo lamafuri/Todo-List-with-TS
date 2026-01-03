@@ -7,8 +7,8 @@
 		<script type="module" src="/src/main.ts"></script>
 	</head>
 
-	<body class="bg-primary-bg text-primary-color relative">
-		<div id="container" class="container w-full px-6 md:w-187.5 lg:w-187.5 relative">
+	<body class="bg-primary-bg text-primary-color relative h-screen">
+		<div id="container" class="container w-full px-6 md:w-187.5 lg:w-187.5 relative h-full">
 			<header class="px-2">
 				<h1 class="text-title font-medium text-center mt-4 mb-4">Todo List</h1>
 				<div id="search-box" class="search grid grid-cols-12">
@@ -27,8 +27,8 @@
 			</header>
 			
 			<!-- Todo List -->
-			<div class="w-full flex justify-center pt-4">
-				<ul id="todo-list" class="todo-list text-todo-list font-medium w-130">
+			<div class="w-full flex justify-center pt-4 h-[80%]">
+				<ul id="todo-list" class="todo-list text-todo-list font-medium w-130 overflow-y-scroll no-scrollbar-x">
 					<!-- Dynamic List goes here -->
 				</ul>
 			</div>
