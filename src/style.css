@@ -17,7 +17,7 @@
   /* --spacing-main-box : clamp() */
 }
 @layer theme{
-  .black{
+  .dark{
     --color-primary-bg: #252525;
     --color-primary-color: #f7f7f7;
   }
@@ -31,7 +31,6 @@
   *{
     padding: 0;
     margin: 0;
-    color: black;
     box-sizing: border-box;
   }
   body{

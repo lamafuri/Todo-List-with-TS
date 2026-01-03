@@ -25,6 +25,7 @@ let todoItemsNodes = todoList.children
 
 let darkBackTheme = document.getElementById('dark-back-theme') as HTMLDivElement;
 
+
 function addTodoToTodos() {
   if(todoInput.value.trim() ==""){
     return
@@ -147,5 +148,24 @@ cancelAdd.addEventListener('click',function(){
 // For Cancel Button
 cancelEdit.addEventListener('click',function(){
   removePopUp()
+})
+// For Dark Mode + Light Mode
+let searchBox = document.getElementById('search-box') as HTMLDivElement;
+let [ _ , moon , sun] = searchBox.children;
+searchBox.addEventListener('click',function(e:Event){
+  console.log(e.target);
+    let currentIconBox = (e.target as HTMLElement).classList
+    if(currentIconBox.contains('moon')){
+      document.body.classList.add('dark')
+      moon.classList.add('hidden')
+      sun.classList.remove('hidden');
+      
+    }
+    else if(currentIconBox.contains('sun')){
+      document.body.classList.remove('dark')
+      // console.log("to light");
+      moon.classList.remove('hidden')
+      sun.classList.add('hidden');
+    }
 })
 
