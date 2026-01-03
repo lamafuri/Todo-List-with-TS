@@ -1,39 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test-ts-crud</title>
-  </head>
-  <body>
-    <div id="main">
-      <form action="" id="todo-form">
-          <input type="text" id="todo-input" placeholder="Enter your todo">
-          <button type="submit" id="submit-button">Add</button>
-        </form>
-        <ul id="todo-list">
-          <li class="todo-item-id">
-          <input type="checkbox" id="todo-item-id">
-          <label for="todo-item-id">
-            First Item
-          </label>
-          <button>Edit</button>
-          <button>Delete</button>
-        </li>
-        <li>
-          <!-- <input type="checkbox" id="todo-list-item">
-          <label for="todo-list-item">
-            First Item
-          </label> -->
-        </li>
-      </ul>
-      <form action="" id="edit-todo-form">
-        <input type="text" id="edit-todo-input">
-        <button type="submit" id="edit-button">Edit</button>
-      </form>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>test-ts-crud</title>
+		<script type="module" src="/src/main.ts"></script>
+	</head>
 
-    </div>
-  <script type="module" src="/src/main.ts"></script>
-  </body>
+	<body class="bg-primary-bg text-primary-color relative">
+		<div id="container" class="container bg-red-400 w-full px-6 md:w-187.5 lg:w-187.5 relative">
+			<header>
+				<h1 class="text-title font-medium text-center mt-4 mb-4">Todo List</h1>
+				<div id="search-box" class="search grid grid-cols-12">
+					<input type="text" class="col-span-11 rounded-md" placeholder="Search todo..." />
+					<button
+						class="moon h-full bg-theme-purple rounded-md w-8 mx-1 md:px-1 md:mx-2 cursor-pointer"
+						id="toggle-theme-to-dark">
+						<i class="fa-solid fa-moon text-2xl text-white"></i>
+					</button>
+					<button
+						class="hidden h-full bg-theme-purple rounded-md w-8 mx-1 md:px-1 md:mx-2 cursor-pointer"
+						id="toggle-theme-to-light">
+						<i class="sun fa-solid fa-sun text-2xl text-white"></i>
+					</button>
+				</div>
+			</header>
+			
+			<!-- Todo List -->
+			<div class="w-full flex justify-center pt-4">
+				<ul id="todo-list" class="todo-list text-todo-list font-medium w-130">
+					<!-- Dynamic List goes here -->
+				</ul>
+			</div>
+			<!-- + button at bottom -->
+			<button id="add-note" class="h-14 w-14 rounded-full bg-theme-purple flex justify-center items-center p-5 absolute bottom-16 right-8 cursor-pointer"><p class="text-white text-5xl font-medium">+</p></button>
+			
+		</div>
+		<!-- Popup Add new todo background for black theme -->
+		<div id="dark-back-theme" class="hidden h-screen w-screen opacity-70 bg-primary-color absolute">
+		</div>
+
+		<!-- Popup Add new todo -->
+		<form  action="" class="hidden bg-primary-bg text-primary-color w-125 h-72.25 absolute top-29.5 rounded-2xl" id="todo-form">
+			<h1 class="text-title text-center m-4 font-medium">NEW NOTE</h1>
+			<input class="border border-button-back m-4 px-1 py-2 w-[93%] rounded-md" id="todo-input" placeholder="Enter your note..."></input>
+			<div class="font-medium px-4 flex justify-between mt-15">
+				<button class="border border-button-back text-button-back px-2 py-1 rounded-md cursor-pointer" type="button" id="cancel-add">Cancel</button>
+				<button id="submit-button" class="bg-theme-purple text-white py-1 px-2 rounded-md cursor-pointer" type="submit">Add</button>
+			</div>
+		</form>
+
+		<!-- Popup for Update TODO -->
+		<form class="hidden bg-primary-bg text-primary-color w-125 h-72.25 absolute top-29.5 rounded-2xl" id="edit-todo-form">
+			<h1 class="text-title text-center m-4 font-medium">EDIT NOTE</h1>
+			<input class="border border-button-back m-4 px-1 py-2 w-[93%] rounded-md" name="notes" id="edit-todo-input"></input>
+			<div class="buttons font-medium px-4 flex justify-between mt-15">
+				<button class="border border-button-back text-button-back px-2 py-1 rounded-md cursor-pointer" id="cancel-edit">Cancel</button>
+				<button id="edit-button" class="bg-theme-purple text-white py-1 px-2 rounded-md cursor-pointer">Edit</button>
+			</div>
+		</form>
+		
+	</body>
 </html>

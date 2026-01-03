@@ -1,17 +1,76 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import 'tailwindcss';
+@theme{
+  /* --breakpoint-md: 187.5rem; */
+  --color-primary-color: #252525;
+  --color-primary-bg: #f7f7f7;
+
+  --text-title: 24px;
+  --text-button-text: 18px;
+  --text-todo-input: 16px;
+  /* --text-todo-list: 20px; */
+  --text-todo-list : clamp(14px , 5vw , 20px);
+  --spacing-mysmall-padd : clamp(10px , 5vw , 20px);
+
+  --color-theme-purple: #6c63ff;
+  /* --spacing-main-box : clamp() */
 }
-*{
-  padding: 0;
-  margin: 0;
+@layer theme{
+  .black{
+    --color-primary-bg: #252525;
+    --color-primary-color: #f7f7f7;
+  }
 }
-body{
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+@layer base{
+  :root {
+    --color-theme-purple: #6c63ff;
+    font-family: "Poppins", sans-serif;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    color: black;
+    box-sizing: border-box;
+  }
+  body{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  input{
+    padding: 4px 10px ;
+    border: 1px solid var(--color-theme-purple);
+  }
+  .todo-checkbox{
+    background-color:#6c63ff;
+    border: 1px solid var(--color-theme-purple);
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+  }
+  .todo-checkbox:checked{
+    background-color:var(--color-theme-purple) ;
+  }
+  .todo-checkbox:checked+label{
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  .todo-list{
+    display: flex;
+    flex-direction: column;
+  }
+  .todo-list li{
+    padding:1.5rem 0;
+    border-bottom: .5px solid var(--color-theme-purple);
+  }
+  .todo-list li:last-child {
+    border-bottom: none;
+  }
+  button > *{
+    pointer-events: none;
+  }
 }
 
