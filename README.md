@@ -5,10 +5,10 @@ A sleek, high-performance Todo application built with **Vanilla TypeScript** and
 ## 🚀 Features
 
 * **Full CRUD Functionality**: Create, Read, Update, and Delete tasks with ease.
-* **Persistence**: Integrated with **Local Storage** to ensure your tasks remain saved even after refreshing the page.
+* **Persistence** [not implemented]: Integrated with **Local Storage** to ensure your tasks remain saved even after refreshing the page. 
 * **Dynamic Theming**: Smooth transition between **Dark Mode** and **Light Mode**.
 * **Responsive UI**: Fully optimized for mobile, tablet, and desktop screens using Tailwind's utility-first approach.
-* **Modern UX**: Real-time updates, hover effects, and intuitive task management.
+* **Modern UX**: Real-time updates and intuitive task management.
 
 ---
 
