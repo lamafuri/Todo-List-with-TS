@@ -1,3 +1,4 @@
+This project is a practical way for me to practice Static Typing. Instead of using regular JavaScript, I used TypeScript to define exactly what kind of data my app should use (like strings for text and booleans for completion). This made the development process much smoother and helped me understand how to build professional apps.
 # 📝 TaskFlow: Modern Todo App
 
 A sleek, high-performance Todo application built with **Vanilla TypeScript** and **Vite**. This project focuses on a seamless user experience, persistent data storage, and a responsive interface that adapts to your environment.
